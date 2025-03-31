@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #decade;
+}
+
+.welcome {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container, .gallery {
+    max-width: 800px; /* Set max width to match the container */
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f1e1e;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.audio-player {
+    width: 300px;
+    margin: 20px;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 10px;
+    margin: 10px;
+}
+
+.image-container img {
+    width: 200px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    height: auto;
+    aspect-ratio: 4 / 3; /* Ensures a 4:3 aspect ratio */
+    object-fit: cover; /* Crops images to fit the container */
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
