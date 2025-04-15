@@ -8,14 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">About</a>
-        <a href="#">Public Relations</a>
-        <a href="#">Photography</a>
-        <a href="#">DFX</a>
-        <a href="#">Career</a>
-        <a href="#">Others</a>
-    </div>
-
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('navbar.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+          })
+          .catch(error => {
+            console.error("Navbar load error:", error);
+          });
+      </script>
 </body>
 </html>
