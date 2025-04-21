@@ -23,7 +23,7 @@ body {
     display: inline-block;
     font-size: 18px;
 }
-.navbar a:hover {
+.nav-links a:hover {
     background-color: #2d2d2b;
     border-radius: 5px;
 }
