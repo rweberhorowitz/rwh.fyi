@@ -2,19 +2,39 @@ body {
     margin: 0;
     font-family: 'Oswald', sans-serif;
     padding-top: 60px; /* Height of your navbar */
-  }
+}
+
 .navbar {
     background-color: #000000;
-    overflow: hidden;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
+    justify-content: space-between; /* Ensures logo and links are spaced correctly */
+    align-items: center; /* Vertically centers the navbar items */
+    padding: 10px 20px; /* Added horizontal padding */
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 1000;
 }
+
+.navbar .logo-link {
+    display: flex;
+    align-items: center; /* Ensures logo is vertically centered */
+    justify-content: flex-start; /* Aligns the logo to the left */
+}
+
+.navbar .logo {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem; /* Space between links */
+    justify-content: flex-end; /* Ensures links are aligned to the right */
+}
+
 .navbar a {
     color: white;
     text-decoration: none;
@@ -23,19 +43,12 @@ body {
     display: inline-block;
     font-size: 18px;
 }
+
 .navbar a:hover {
     background-color: #2d2d2b;
     border-radius: 5px;
 }
-.logo {
-    height: 40px; /* adjust as needed */
-    width: auto;
-    margin-left: 10px;
-}
-.nav-links {
-    display: flex;
-    gap: 1rem;
-}
+
 .content {
     margin-top: 60px; /* Ensure content is not hidden under fixed menu */
     padding: 20px;
