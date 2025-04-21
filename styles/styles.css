@@ -39,5 +39,5 @@ body {
 }
 .content {
     margin-top: 60px; /* Ensure content is not hidden under fixed menu */
-    padding: 5px 40px;
+    padding: 20px;
 }
