@@ -7,7 +7,7 @@ body {
     background-color: #000000;
     overflow: hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -28,7 +28,6 @@ body {
     border-radius: 5px;
 }
 .logo {
-    justify-content:left;
     height: 60px; /* adjust as needed */
     width: auto;
 }
