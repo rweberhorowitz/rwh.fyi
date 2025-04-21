@@ -28,8 +28,8 @@ body {
     border-radius: 5px;
 }
 .logo {
-    justify-content:  flex-start;
-    height: 40px; /* adjust as needed */
+    justify-content:left;
+    height: 60px; /* adjust as needed */
     width: auto;
 }
 .content {
