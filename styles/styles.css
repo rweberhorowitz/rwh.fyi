@@ -31,6 +31,10 @@ body {
     height: 60px; /* adjust as needed */
     width: auto;
 }
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
 .content {
     margin-top: 60px; /* Ensure content is not hidden under fixed menu */
     padding: 20px;
