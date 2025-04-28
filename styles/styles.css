@@ -37,7 +37,3 @@ body {
     display: flex;
     gap: 1rem;
 }
-.content {
-    margin-top: 40px; /* Ensure content is not hidden under fixed menu */
-    padding: 20px;
-}
