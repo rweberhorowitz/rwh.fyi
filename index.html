@@ -11,6 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
+    <!-- NavBar -->
     <div id="navbar-placeholder"></div>
     <script>
         fetch('navbar.html')
@@ -23,13 +24,13 @@
           });
     </script>
 
+    <!-- Image Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-
       <div class="carousel-inner" style="height: 400px;">
         <div class="carousel-item active">
           <img src="content/images/bugDrop_Large.webp" class="d-block w-100 h-100 object-fit-cover" alt="First slide" style="max-height: 400px; width: auto;">
@@ -49,7 +50,6 @@
           </div>
         </div>
       </div>
-
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -60,25 +60,7 @@
       </button>
     </div>
 
-    <div class="container">
-   
-
-
-
-      
-      <body>
-    <div id="navbar-placeholder"></div>
-    <script>
-        fetch('navbar.html')
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-          })
-          .catch(error => {
-            console.error("Navbar load error:", error);
-          });
-    </script>
-
+    <!-- About Me and Contact Card -->
     <div class="container my-5">
       <div class="row justify-content-around">
         <div class="col-4">
@@ -110,23 +92,24 @@
           </div>          
         </div>
       </div>
-
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-      
+    <!-- Featured -->
+    <div class="containter">
       <h3 class="text-center my-5">Check Out These Featured Projects</h3>
       <div class="row text-center mb-5">
         <div class="col">
           <h5 class="text-center">Recent Photoshoot</h5>
-          <img src="content/images/rileycoupon-11.webp" style="max-height: 300px; width: auto;">
+          <a href="photography.html">
+            <img src="content/images/rileycoupon-11.webp" class="rounded" style="max-height: 300px; width: auto;">
+          </a>
         </div>
         <div class="col">
           <h5 class="text-center">Recent Publication</h5>
-          <img src="content/images/1706299781.jpg" style="max-height: 300px; width: auto;">
+          <a href="public-relations.html">
+            <img src="content/images/1706299781.jpg" class="rounded" style="max-height: 300px; width: auto;">
+          </a>
         </div>
       </div>
     </div>
