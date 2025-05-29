@@ -36,7 +36,7 @@ jobs:
         with:
           python-version: '3.13'
       - name: Generate HTML photo galleries
-        run: python create_photos_html.py
+        run: python scripts/create_photos_html.py
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
