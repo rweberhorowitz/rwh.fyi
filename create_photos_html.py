@@ -43,7 +43,7 @@ for dir, paths, files in os.walk("photos"):
   <div class="row m-2 py-2">
 """ + "".join(["""
     <div class="px-2 col-lg-4 mb-lg-0">
-""" + "".join([(f"<a href='/{html.escape(photo[:photo.rfind(".")])}'>" if (d := photo[-1] == "/") else "") +
+""" + "".join([(f"<a href='/{html.escape(photo[:photo.rfind('.')])}'>" if (d := photo[-1] == "/") else "") +
     f"""
       <img
         src="/{html.escape(photo[:-1] if d else photo)}"
