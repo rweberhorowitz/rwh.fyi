@@ -10,8 +10,11 @@ for dir, paths, files in os.walk("photos"):
     columns = 3 # columns three
     divided = [[] for _ in range(columns)] # 2d array that has the photos divided into columns
     for i, file in enumerate(sorted(files)): # go through all files
-        divided[i % columns].append(dir + "/" + file) # sort them into columns
-    with open(dir + ".html", "w") as f: # create the html file
+        if file.endswith(".html"): # skip all generated html files
+            continue
+        filename = file[:file.rfind(".")]
+        divided[i % columns].append(dir + "/" + file + ("/" if filename in paths else "")) # sort them into columns
+    with open(dir + "/index.html", "w") as f: # create the html file
         f.write("""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,12 +43,13 @@ for dir, paths, files in os.walk("photos"):
   <div class="row m-2 py-2">
 """ + "".join(["""
     <div class="px-2 col-lg-4 mb-lg-0">
-""" + "".join([f"""
+""" + "".join([(f"<a href='/{html.escape(photo[:photo.rfind(".")])}'>" if (d := photo[-1] == "/") else "") +
+    f"""
       <img
-        src="/{html.escape(photo)}"
+        src="/{html.escape(photo[:-1] if d else photo)}"
         class="w-100 shadow-1-strong rounded mb-3"
       />
-""" for photo in column]) + """
+""" + ("</a>" if d else "") for photo in column]) + """
     </div>
 """ for column in divided]) + """
   </div>
