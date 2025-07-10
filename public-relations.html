@@ -1,66 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Riley Weber-Horowitz</title>
-  <link rel="icon" type="image/x-icon" href="content/logos/RWH_White_Cropped.svg">
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Riley Weber-Horowitz - Public Relations</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        :root {
+            --dark-bg: #1A1A1D;
+            --primary-accent: #F5F5F5;
+            --secondary-accent: #4E4E50;
+            --light-text: #F5F5F5;
+            --medium-text: #A9A9A9;
+            --card-bg: #4E4E50;
+        }
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+        }
+        .text-primary-accent {
+            color: var(--primary-accent);
+        }
+        .bg-primary-accent {
+            background-color: var(--primary-accent);
+        }
+        .text-secondary-accent {
+            color: var(--secondary-accent);
+        }
+        .bg-secondary-accent {
+            background-color: var(--secondary-accent);
+        }
+        .bg-card {
+            background-color: var(--card-bg);
+        }
+        .text-light {
+            color: var(--light-text);
+        }
+        .text-medium {
+            color: var(--medium-text);
+        }
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-[var(--light-text)] hover:text-[var(--primary-accent)] hover:bg-[var(--secondary-accent)];
+        }
+        .content-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 16px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+        .publication-card-image {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
-<body>
-    <div id="navbar-placeholder"></div>
+<body class="bg-[var(--dark-bg)]">
+    <header class="bg-[var(--dark-bg)] text-[var(--light-text)] p-4 shadow-md sticky top-0 z-50 border-b border-[var(--secondary-accent)]">
+        <div class="container mx-auto flex justify-between items-center relative">
+            <div class="flex items-center">
+                <a class="nav-link" href="index.html">
+                    <img src="content/logos/RWH_White_Cropped.svg" alt="RWH Logo" class="w-15 h-10 text-[var(--primary-accent)]" />
+                </a>
+            </div>
+
+            <!-- Hamburger menu button for mobile -->
+            <button id="menu-button" class="md:hidden text-[var(--primary-accent)] focus:outline-none">
+                <span class="material-icons text-3xl">menu</span>
+            </button>
+
+            <!-- Desktop Navigation Links (hidden on mobile) -->
+            <nav class="hidden md:flex items-center space-x-4">
+                <a class="nav-link text-[var(--light-text)] hover:text-[var(--primary-accent)]" href="career.html">Career</a>
+                <a class="nav-link text-[var(--primary-accent)] bg-[var(--secondary-accent)]" href="public-relations.html">Public Relations</a>
+                <a class="nav-link text-[var(--light-text)] hover:text-[var(--primary-accent)]" href="photography.html">Photography</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation Links (full width, stacked - initially hidden) -->
+        <nav id="mobile-menu" class="hidden md:hidden flex-col absolute top-full left-0 w-full bg-[var(--dark-bg)] p-4 shadow-lg">
+            <a class="nav-link block py-2" href="career.html">Career</a>
+            <a class="nav-link block py-2" href="public-relations.html">Public Relations</a>
+            <a class="nav-link block py-2" href="photography.html">Photography</a>
+        </nav>
+    </header>
+    <main class="container mx-auto p-4 md:p-8">
+        <section class="py-8 md:py-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[var(--primary-accent)] text-center mb-10 md:mb-16">Public Relations</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="content-card text-[var(--light-text)] flex flex-col">
+                    <img alt="Publication Cover 1" class="w-full publication-card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNlq0K71vQ9p6P_J8wH5f9Yv3hQ_L1kM0jW_nZ0xR1yB9wS_K_pX2eF1cGnJ7rVzC0iA-T9hU4lG_V_c_sN_gO_oX_c_rT_eW_i_N_gD_qZ_s_P_yX_w_Z_b_A_u_G_H_J_K_L_M_N_O_P_Q_R_S_T_U_V_W_X_Y_Z_1_2_3_4_5_6_7_8_9_0"/>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-accent)]">I like trains</h3>
+                    <p class="text-sm text-[var(--medium-text)] mb-4 flex-grow">they make cool noises</p>
+                    <a class="inline-block bg-[var(--primary-accent)] text-[var(--dark-bg)] hover:bg-[var(--dark-bg)] hover:text-[var(--primary-accent)] border border-[var(--primary-accent)] font-semibold py-2 px-4 rounded-md transition-colors duration-300 text-center" href="#">
+                        Read More
+                    </a>
+                </div>
+                <div class="content-card text-[var(--light-text)] flex flex-col">
+                    <img alt="Event Cover 1" class="w-full publication-card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj_Z9xY8wV7uT6sR4qP2oN1mK_J_I_H_G_F_E_D_C_B_A_zYxWvUtSrQpOnMlKjIhGfEdCbA_0987654321_ZYXWVUTSRQPONMLKJIHGFEDCBA"/>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-accent)]">speaking</h3>
+                    <p class="text-sm text-[var(--medium-text)] mb-4 flex-grow">yes yes yes</p>
+                    <a class="inline-block bg-[var(--primary-accent)] text-[var(--dark-bg)] hover:bg-[var(--dark-bg)] hover:text-[var(--primary-accent)] border border-[var(--primary-accent)] font-semibold py-2 px-4 rounded-md transition-colors duration-300 text-center" href="#">
+                        Event Details
+                    </a>
+                </div>
+                <div class="content-card text-[var(--light-text)] flex flex-col">
+                    <img alt="Publication Cover 2" class="w-full publication-card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpe5lnyc91Tl3ooEsGWsJD7smDZ_MFAAVE8lwz9eKb0rcYs37lCXwuqQp9NwQyAB0cz4Veikpb9lDNNykGDDDwsakzrCLov_js9Mk4pHE3TwmSYWyMriApzf5EvA9Jad83bnWKeKzOw6vLtpmMgiOStRmcie6jL14u14ox2sxaaDjbUx-4OF9NV6wnbFluiGaXMsx8HgcB3PFczepinqvEkIm3SFTHcpua57jhFupmksM0fubVrU6z50HGSLg2XUbOdwukSoxGa8g"/>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-accent)]">things</h3>
+                    <p class="text-sm text-[var(--medium-text)] mb-4 flex-grow">thangs</p>
+                    <a class="inline-block bg-[var(--primary-accent)] text-[var(--dark-bg)] hover:bg-[var(--dark-bg)] hover:text-[var(--primary-accent)] border border-[var(--primary-accent)] font-semibold py-2 px-4 rounded-md transition-colors duration-300 text-center" href="#">
+                        Read More
+                    </a>
+                </div>
+                <div class="content-card text-[var(--light-text)] flex flex-col">
+                    <img alt="Event Cover 2" class="w-full publication-card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTzbNAlb8YjGos4TSZkeGd7VMAkdMMY_AaRGrpyxfOoA-emhUoPvWPaSpD0Mlg3bHOr95FR_zlBgChDmcp4oHBhd8FbjckZaf7Z9wDputRFQKE-HrwcksWg5YYShO3wGRxCVZfT1DKdQ4_XV3TG57-wivw9huTABApePxVZrzy3VKypL91s0VmpMFXJ3d9R2YFhveQjUXEdfc2xMPm3MmLBWRdAIPhhuYUuyviub8Cmsx573ndLEpmy0dYMuOasgIw5BgeGwU98IY"/>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-accent)]">Story</h3>
+                    <p class="text-sm text-[var(--medium-text)] mb-4 flex-grow">wow pretty neat</p>
+                    <a class="inline-block bg-[var(--primary-accent)] text-[var(--dark-bg)] hover:bg-[var(--dark-bg)] hover:text-[var(--primary-accent)] border border-[var(--primary-accent)] font-semibold py-2 px-4 rounded-md transition-colors duration-300 text-center" href="#">
+                        Learn More
+                    </a>
+                </div>
+                <div class="content-card text-[var(--light-text)] flex flex-col">
+                    <img alt="Publication Cover 3" class="w-full publication-card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf3npep2sfb4myfBFMTcMgiRRV5uEo-1CYmgHO8mejvIshT_NbUkR0-tJQwnjmM_Tk5EQbBOoNDlv6A_aVf9n8U1swUOqV12G-U972zeFZz_mb23swDSteKOAtem3MqDi9kCAl8XZKYJ4FnuJvtkB2LyTBgtiu-I9k61M8gCgsniEFqaFkw9JyJ7UdxFODfcG7wwXMAftfQbu7rPgDw8M57hMHKuihecKSSPqv8sEMfMVFUDXxWicZ3qzF6vpn-9S_RLfwsKQVT0U"/>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-accent)]">Event</h3>
+                    <p class="text-sm text-[var(--medium-text)] mb-4 flex-grow">yes it's a thing</p>
+                    <a class="inline-block bg-[var(--primary-accent)] text-[var(--dark-bg)] hover:bg-[var(--dark-bg)] hover:text-[var(--primary-accent)] border border-[var(--primary-accent)] font-semibold py-2 px-4 rounded-md transition-colors duration-300 text-center" href="#">
+                        Read Article
+                    </a>
+                </div>
+                <div class="content-card text-[var(--light-text)] flex flex-col">
+                    <img alt="Event Cover 3" class="w-full publication-card-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC30KAVYfiI19pHfuV6dBjTkjiR_U9jAeH1fq8hkPppPHFcYk58MKsE2OS0yjBTDgaTggLfMmZAmpH7O6-j4XWIpGe6rU4tIsYxc6i-twzNrF7giqwGFwQEoijNo9LqtbpGRn6B9GARskt0gfwlj4wYe8KMGQAjhQlgQGmTpTkhM1NHzV7ghYFuuQE2GsCFs3ddiXHacjipQ0nSkHctcdDSpmnKeGr8SgbRlSleoikaVa9iTmwXUa-b7U-b2IKNVkFVqHCob_f_NFg"/>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--primary-accent)]">Event</h3>
+                    <p class="text-sm text-[var(--medium-text)] mb-4 flex-grow">yes it's a thing</p>
+                    <a class="inline-block bg-[var(--primary-accent)] text-[var(--dark-bg)] hover:bg-[var(--dark-bg)] hover:text-[var(--primary-accent)] border border-[var(--primary-accent)] font-semibold py-2 px-4 rounded-md transition-colors duration-300 text-center" href="#">
+                        Watch Recording
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[var(--dark-bg)] text-[var(--light-text)] text-center p-6 mt-8 md:mt-12 border-t border-[var(--secondary-accent)]">
+        <p class="text-sm">© 2025 Riley Weber-Horowitz. All rights reserved.</p>
+    </footer>
     <script>
-        fetch('navbar.html')
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-          })
-          .catch(error => {
-            console.error("Navbar load error:", error);
-          });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hamburger menu functionality
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = mobileMenu.querySelectorAll('.nav-link');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // No need to toggle 'flex' or 'flex-col' as they are now static on mobileMenu when visible
+            });
+
+            // Close menu when a navigation link is clicked (for smoother mobile experience)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Check if the screen is small (based on Tailwind's 'md' breakpoint, which is 768px by default)
+                    if (window.innerWidth < 768) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Close menu if resized to larger screen from mobile
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    mobileMenu.classList.add('hidden'); // Ensure mobile menu is hidden on desktop
+                }
+            });
+        });
     </script>
-
-    <!-- Publications / Articles -->
-    <div class="p-5 mt-5 container rounded" style="background-color: #A9B4C2;">
-      <!-- Use the following as a template -->
-      <div class="container pb-4">
-        <div class="rounded p-2" style="border: solid #1C2321; background-color: #EEF1EF;">
-          <div class="pb-2">
-            <h3>Publication title</h3>
-            <p><small>Enter the date here: 2/3/25</small></p>
-          </div>
-          <p>This is where the description goes!</p>
-          <a href="https://nku.edu/academics/informatics/about/news-events/past-events/duke-energy-innovation-lab.html" target="_blank">Read More Here</a>
-        </div>
-      </div>
-      <!-- End template -->
-
-      <div class="container pb-4">
-        <div class="rounded p-2" style="border: solid #1C2321; background-color: #EEF1EF;">
-          <div class="pb-2">
-            <h3>Publication title</h3>
-            <p><small>Enter the date here: 2/3/25</small></p>
-          </div>
-          <p>This is where the description goes!</p>
-          <a href="#" target="_blank">Read More Here</a>
-        </div>
-      </div>
-      
-
-      <div class="container pb-4">
-        <div class="rounded p-2" style="border: solid #1C2321; background-color: #EEF1EF;">
-          <div class="pb-2">
-            <h3>Publication title</h3>
-            <p><small>Enter the date here: 2/3/25</small></p>
-          </div>
-          <p>This is where the description goes!</p>
-          <a href="#" target="_blank">Read More Here</a>
-        </div>
-      </div>
-    </div>
-      
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

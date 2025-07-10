@@ -1,74 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Riley Weber-Horowitz</title>
-  <link rel="icon" type="image/x-icon" href="content/logos/RWH_White_Cropped.svg">
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Riley Weber-Horowitz - Career</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        :root {
+            --dark-bg: #1A1A1D;
+            --primary-accent: #F5F5F5;
+            --secondary-accent: #4E4E50;
+            --light-text: #F5F5F5;
+            --medium-text: #A9A9A9;
+            --card-bg: #4E4E50;
+        }
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+        }
+        .text-primary-accent {
+            color: var(--primary-accent);
+        }
+        .bg-primary-accent {
+            background-color: var(--primary-accent);
+        }
+        .text-secondary-accent {
+            color: var(--secondary-accent);
+        }
+        .bg-secondary-accent {
+            background-color: var(--secondary-accent);
+        }
+        .bg-card {
+            background-color: var(--card-bg);
+        }
+        .text-light {
+            color: var(--light-text);
+        }
+        .text-medium {
+            color: var(--medium-text);
+        }
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-[var(--light-text)] hover:text-[var(--primary-accent)] hover:bg-[var(--secondary-accent)];
+        }
+        .experience-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
-<body>
-    <div id="navbar-placeholder"></div>
+<body class="bg-[var(--dark-bg)]">
+    <header class="bg-[var(--dark-bg)] text-[var(--light-text)] p-4 shadow-md sticky top-0 z-50 border-b border-[var(--secondary-accent)]">
+        <div class="container mx-auto flex justify-between items-center relative">
+            <div class="flex items-center">
+                <a class="nav-link" href="index.html">
+                    <img src="content/logos/RWH_White_Cropped.svg" alt="RWH Logo" class="w-15 h-10 text-[var(--primary-accent)]" />
+                </a>
+            </div>
+
+            <button id="menu-button" class="md:hidden text-[var(--primary-accent)] focus:outline-none">
+                <span class="material-icons text-3xl">menu</span>
+            </button>
+
+            <nav class="hidden md:flex items-center space-x-4">
+                <a class="nav-link text-[var(--primary-accent)] hover:text-[var(--primary-accent)] bg-[var(--secondary-accent)]" href="career.html">Career</a>
+                <a class="nav-link text-[var(--light-text)] hover:text-[var(--primary-accent)]" href="public-relations.html">Public Relations</a>
+                <a class="nav-link text-[var(--light-text)] hover:text-[var(--primary-accent)]" href="photography.html">Photography</a>
+            </nav>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden flex-col absolute top-full left-0 w-full bg-[var(--dark-bg)] p-4 shadow-lg z-40">
+            <a class="nav-link block py-2 text-[var(--primary-accent)] hover:text-[var(--primary-accent)] bg-[var(--secondary-accent)]" href="career.html">Career</a>
+            <a class="nav-link block py-2 text-[var(--light-text)] hover:text-[var(--primary-accent)]" href="public-relations.html">Public Relations</a>
+            <a class="nav-link block py-2 text-[var(--light-text)] hover:text-[var(--primary-accent)]" href="photography.html">Photography</a>
+        </nav>
+    </header>
+    <main class="container mx-auto p-4 md:p-8">
+        <section class="py-8 md:py-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-[var(--primary-accent)] mb-10">My Career Journey</h1>
+            <div class="mb-12">
+                <h2 class="text-3xl font-semibold text-[var(--primary-accent)] mb-6 text-center md:text-left">Resume Overview</h2>
+                <div class="bg-[var(--card-bg)] rounded-lg p-2 shadow-lg">
+                    <iframe class="w-full h-[600px] md:h-[800px] rounded" src="content/rweberhorowitzResume.pdf" title="Riley Weber-Horowitz Resume"></iframe>
+                </div>
+                <p class="text-center text-[var(--medium-text)] mt-4 text-sm">
+                    For the best viewing experience or to download, please
+                    <a class="text-[var(--primary-accent)] hover:underline font-medium" href="content/rweberhorowitzResume.pdf" rel="noopener noreferrer" target="_blank">click here to open the resume in a new tab</a>.
+                </p>
+            </div>
+        </section>
+        <section class="py-8 md:py-12">
+            <h2 class="text-3xl font-semibold text-[var(--primary-accent)] mb-8 text-center md:text-left">Professional Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="experience-card">
+                    <h3 class="text-2xl font-bold text-[var(--primary-accent)] mb-2">Title</h3>
+                    <p class="text-lg text-[var(--medium-text)] mb-1">Company</p>
+                    <p class="text-sm text-[var(--medium-text)] mb-3">Jan 2022 - Present</p>
+                    <ul class="list-disc list-inside text-[var(--light-text)] space-y-1 font-light">
+                        <li>what you did/learned</li>
+                        <li>what you did/learned</li>
+                        <li>what you did/learned</li>
+                        <li>what you did/learned</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3 class="text-2xl font-bold text-[var(--primary-accent)] mb-2">Public Relations Manager</h3>
+                    <p class="text-lg text-[var(--medium-text)] mb-1">Global Connect Agency</p>
+                    <p class="text-sm text-[var(--medium-text)] mb-3">June 2019 - Dec 2021</p>
+                    <ul class="list-disc list-inside text-[var(--light-text)] space-y-1 font-light">
+                        <li>Secured media placements in top-tier publications.</li>
+                        <li>Managed crisis communications and brand reputation.</li>
+                        <li>Organized and promoted press conferences and events.</li>
+                        <li>Cultivated relationships with key media contacts.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3 class="text-2xl font-bold text-[var(--primary-accent)] mb-2">Photography Intern</h3>
+                    <p class="text-lg text-[var(--medium-text)] mb-1">Artistic Visions Studio</p>
+                    <p class="text-sm text-[var(--medium-text)] mb-3">May 2018 - Aug 2018</p>
+                    <ul class="list-disc list-inside text-[var(--light-text)] space-y-1 font-light">
+                        <li>Assisted lead photographers in studio and on-location shoots.</li>
+                        <li>Managed photo editing and post-production workflows.</li>
+                        <li>Organized and maintained photographic equipment.</li>
+                        <li>Contributed to creative concepts for photo projects.</li>
+                    </ul>
+                </div>
+                <div class="experience-card md:col-span-2 lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-[var(--primary-accent)] mb-2">Freelance Content Creator</h3>
+                    <p class="text-lg text-[var(--medium-text)] mb-1">Self-Employed</p>
+                    <p class="text-sm text-[var(--medium-text)] mb-3">Jan 2017 - May 2019</p>
+                    <ul class="list-disc list-inside text-[var(--light-text)] space-y-1 font-light">
+                        <li>Produced engaging written and visual content for various clients.</li>
+                        <li>Managed social media accounts for small businesses.</li>
+                        <li>Developed brand identity and marketing materials.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[var(--dark-bg)] text-[var(--light-text)] text-center p-6 mt-8 md:mt-12 border-t border-[var(--secondary-accent)]">
+        <p class="text-sm">© 2025 Riley Weber-Horowitz. All rights reserved.</p>
+    </footer>
     <script>
-        fetch('navbar.html')
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-          })
-          .catch(error => {
-            console.error("Navbar load error:", error);
-          });
-      </script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hamburger menu functionality
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = mobileMenu.querySelectorAll('.nav-link');
 
-    <div class="container py-5">
-      <div class="rounded" style="border: solid #1C2321;">
-        <div class="text-center" style="background-color: #1C2321;">
-          <h3 style="color: white;" class="py-2">PROFESSIONAL EXPERIENCE</h3>
-        </div>
-        <div class="px-2">
-          <h5>College of Informatics - Northern Kentucky University</h6>
-          <p>Student Communications & Events Coordinator | Feb 2023 - Current</p>
-          <ul>
-            <li>Web editor for the Informatics website, assisted with website redesign</li>
-            <li>Manages all social media accounts of the college, boosting engagement</li>
-            <li>Provides photography, videography, and communication needs</li>
-            <li>Helps plan events for the College of Informatics</li>
-            <li>Provides content for internal & external communications</li>
-          </ul>
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-          <br>
+            // Close menu when a navigation link is clicked (for smoother mobile experience)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Check if the screen is small (based on Tailwind's 'md' breakpoint, which is 768px by default)
+                    if (window.innerWidth < 768) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
 
-          <h5>Center for Integrative Natural Science and Mathematics (CINSAM) Cyber Academy</h5>
-          <p>Teaching Assistant | May 2024 - June 2024</p>
-          <ul>
-            <li>Collaborated with fellow CINSAM teaching assistants to plan, design and organize all instructional materials</li>
-            <li>Delivered engaging instructional content to CINSAM cyber camp students</li>
-            <li>Mentored high school students through several educational cybersecurity games, activities and workshops</li>
-            <li>Provided swift, effective and positive conflict resolution when required</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="container py-5">
-      <div class="rounded" style="border: solid #1C2321;">
-        <div class="text-center" style="background-color: #1C2321;">
-          <h3 style="color: white;" class="py-2">RECENT VOLUNTEERING - LIST OF ORGANIZATIONS</h3>
-        </div>
-        <div class="px-2">
-          <h5>Additional details available upon request</h6>
-          <ul>
-            <li>INTERalliance TechOlympics</li>
-            <li>Campbell County 4-H</li>
-            <li>Matthew 25 Ministries (Humanitarian Aid)</li>
-            <li>Campbell County Band of Pride</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            // Close menu if resized to larger screen from mobile
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    mobileMenu.classList.add('hidden'); // Ensure mobile menu is hidden on desktop
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riley Weber-Horowitz</title>
+  <link rel="icon" type="image/x-icon" href="content/logos/RWH_White_Cropped.svg">
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- NavBar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('navbar.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+          })
+          .catch(error => {
+            console.error("Navbar load error:", error);
+          });
+    </script>
+
+    <!-- Image Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style="height: 400px;">
+        <div class="carousel-item active">
+          <img src="content/images/bugDrop_Large.webp" class="d-block w-100 h-100 object-fit-cover" alt="First slide" style="max-height: 400px; width: auto;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Cool Photo</h5>
+            <p>Really cool photo</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="content/images/lightShreds05_Large.webp" class="d-block w-100 h-100 object-fit-cover" alt="Second slide" style="max-height: 400px; width: auto;">
+          <div class="carousel-caption d-none d-md-block rounded">
+            <div style="background-color: rgba(0, 0, 0, 0.6);">
+              <h5>Cool</h5>
+              <p>Really cool photo</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="content/images/northernerCathedralMag-13_Large.webp" class="d-block w-100 h-100 object-fit-cover" alt="Third slide" style="max-height: 400px; width: auto;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Cool Photo</h5>
+            <p>Really cool photo</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- About Me and Contact Card -->
+    <div class="container my-5">
+      <div class="row justify-content-around">
+        <div class="col-6">
+          <h3 class="text-center font-weight-bold">About Me</h3>
+          <p>I’m an entry-level Public Relations professional with a strong background in organizing and leadership. Through my experiences with community volunteering and outreach, I’m a passionate and dedicated communicator with a love for helping others. I’m a confident public speaker and an innovative problem solver. Currently, I’m a student worker at NKU’s College of Informatics (COI). I design digital content for the COI’s social media and interview and engage with local organizations for the college. Additionally, I have had the privilege of planning and managing some of the COI’s biggest events! It brings me great joy to know that my efforts are making a difference in the lives of my fellow students. I also have a long history of community service and volunteer work; I’ve been an active member in my community for most of my life! Whether I was handing out meals and school supplies to families in need, assisting in coaching the local robotics team or volunteering my time to the Campbell County Band of Pride, I’ve always been on the lookout for ways to help others. When I’m not working or volunteering, you can often find me hanging out around campus. I love biking, reading, gardening and playing bass guitar. Most importantly, though, I’m a huge people-person; I’ll be friends with anyone!</p>
+        </div>
+        <div class="col-4">
+          <div class="card" style="width: 18rem; background-color: #A9B4C2;">
+            <img src="content/images/rileycoupon-15.webp" class="card-img-top" alt="Riley Photo">
+            <div class="card-body text-center">
+              <h5 class="card-title">Riley Weber-Horowitz</h5>
+              <p class="card-text">Northern Kentucky University Student</p>
+              <p class="card-text"><a href="mailto:weberhoror2@mymail.nku.edu">Message Me</a></p>
+              <div class="d-flex justify-content-center mb-2">
+                <div class="btn-group" role="group" aria-label="lost expedition links">
+                </div>
+              </div>
+              <div class="d-flex justify-content-center gap-2 mt-3">
+                <a href="https://www.instagram.com/rweberhorowitz/" target="_blank" class="btn btn-light rounded-circle">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/riley-weber-horowitz-92266b217/" target="_blank" class="btn btn-light rounded-circle">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://x.com/rweberhorowitz" target="_blank" class="btn btn-light rounded-circle">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+    <hr>
+
+
+    <!-- Featured -->
+    <div class="container">
+      <h3 class="text-center my-5">Check Out These Featured Projects</h3>
+      <div class="row text-center mb-5">
+        <div class="col">
+          <h5 class="text-center">Recent Photoshoot</h5>
+          <a href="photos">
+            <img src="content/images/rileycoupon-11.webp" class="rounded" style="max-height: 300px; width: auto;">
+          </a>
+        </div>
+        <div class="col">
+          <h5 class="text-center">Recent Publication</h5>
+          <a href="public-relations.html">
+            <img src="content/images/1706299781.jpg" class="rounded" style="max-height: 300px; width: auto;">
+          </a>
+        </div>
+      </div>
+    </div>
+      
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
